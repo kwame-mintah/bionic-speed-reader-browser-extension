@@ -2,6 +2,8 @@
 
 A simple chrome extension using [Bionic Reading API](https://rapidapi.com/bionic-reading-bionic-reading-default/api/bionic-reading1/), provided by [RapidAPI](https://rapidapi.com/hub).
 
+<p style="text-align:center"> 🚧  👷 Currently in the early stages of development 👷 🚧 </p>
+
 ## Prerequisites
 
 1. Have a RapidAPI account,
@@ -45,3 +47,9 @@ Documentation of using RapidAPI can be found [here](https://docs.rapidapi.com/do
 - [ ] Use a pop-up for the API response, rather than opening in a new tab,
 - [ ] Better error handling, e.g. inform the user if they have reached their request limit for the day.
 - [ ] Tidy-up the code :sweat_smile:
+
+## Disclaimer
+
+Un-official chrome extension for Bionic Reading (BR®). All trademarks are the property of their respective owners.
+
+For more information on Bionic Reading and how it works, please see: https://bionic-reading.com/about/
