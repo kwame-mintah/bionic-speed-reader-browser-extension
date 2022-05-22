@@ -24,6 +24,7 @@ A simple chrome extension using [Bionic Reading API](https://rapidapi.com/bionic
 3. Enter your RapidAPI Key that is subscribed to the Bionic Reading API.
 4. You can change your fixation (default: 1) and saccade (default: 10).
 5. If you want to preview your changes, click 'Save' first, then 'Preview' button.
+6. Highlight text on a page and right click and select 'Bionic Reading convert text ...'
 
 ## FAQ
 
@@ -39,7 +40,7 @@ Documentation of using RapidAPI can be found [here](https://docs.rapidapi.com/do
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/brave/brave_48x48.png" alt="Brave" width="28px" />](https://brave.com)</br>Brave     | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" />](https://www.google.com/intl/en_us/chrome/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](https://www.microsoft.com/edge)</br>Edge           |
 |-----------|--------|----------------|
-| V1.38.119 | TBD    | V101.0.1210.53 |
+| V1.38.119 | V101.0.4951.67 | V101.0.1210.53 |
 
 ## Improvements
 
