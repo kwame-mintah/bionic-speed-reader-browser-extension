@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../images/brc_logo128.png" />
+    <title>Bionic Reading Chrome Extension</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="../images/brc_logo128.png">
-  <title>Bionic Reading Chrome Extension</title>
-</head>
+  <body>
+    <div id="options">
+      <div id="apiKeyOption">
+        <h4>Enter your RapidAPI Key</h4>
+        <label>
+          <input type="text" name="rapid-api" id="apiKey" />
+        </label>
+      </div>
 
-<body>
-  <div id="options">
-
-    <div id="apiKeyOption">
-      <h4>Enter your RapidAPI Key</h4>
-      <label>
-        <input type="text" name="rapid-api" id="apiKey">
-      </label>
-    </div>
-
-    <div id="fixationOption">
-      <h4>Fixation</h4>
-      <label>
-        <button id="btn1" value="1">1</button>
-        <button id="btn2" value="2">2</button>
-        <button id="btn3" value="3">3</button>
-        <button id="btn4" value="4">4</button>
-        <button id="btn5" value="5">5</button>
+      <div id="fixationOption">
+        <h4>Fixation</h4>
+        <label>
+          <button id="btn1" value="1">1</button>
+          <button id="btn2" value="2">2</button>
+          <button id="btn3" value="3">3</button>
+          <button id="btn4" value="4">4</button>
+          <button id="btn5" value="5">5</button>
+        </label>
         <p>
-          With the Fixation you define the expression of the letter combinations.
-          You can choose a value between 1 and 5 (1, 2, 3, 4 or 5);
+          With the Fixation you define the expression of the letter
+          combinations. You can choose a value between 1 and 5 (1, 2, 3, 4 or
+          5);
         </p>
-      </label>
+      </div>
+
+      <div id="saccadeOption">
+        <h4>Saccade</h4>
+        <label>
+          <button id="btn10" value="10">10</button>
+          <button id="btn20" value="20">20</button>
+          <button id="btn30" value="30">30</button>
+          <button id="btn40" value="40">40</button>
+          <button id="btn50" value="50">50</button>
+        </label>
+        <p>
+          With the Saccade you define the visual jumps from Fixation to
+          Fixation. You can choose a value between 10 and 50, in steps of ten
+          (10, 20, 30, 40 or 50);
+        </p>
+      </div>
+
+      <div id="previewOption">
+        <h4>Preview</h4>
+        <p id="previewText">The quick brown fox jumps over the lazy dog</p>
+        <div id="bionic-response"></div>
+        <p>
+          <b>Note:</b> Save your changes before pressing the 'Preview' button.
+        </p>
+      </div>
+
+      <div>
+        <button id="submit">Save</button>
+        <button id="preview">Preview</button>
+        <button id="clear">Clear local storage</button>
+      </div>
     </div>
-
-    <div id="saccadeOption">
-      <h4>Saccade</h4>
-      <label>
-        <button id="btn10" value="10">10</button>
-        <button id="btn20" value="20">20</button>
-        <button id="btn30" value="30">30</button>
-        <button id="btn40" value="40">40</button>
-        <button id="btn50" value="50">50</button>
-      </label>
-      <p>
-        With the Saccade you define the visual jumps from Fixation to Fixation.
-        You can choose a value between 10 and 50, in steps of ten (10, 20, 30, 40 or 50);
-      </p>
-    </div>
-
-    <div id="previewOption">
-      <h4>Preview</h4>
-      <p id="previewText">The quick brown fox jumps over the lazy dog</p>
-      <div id="bionic-response"></div>
-      <p><b>Note:</b> Save your changes before pressing the 'Preview' button.</p>
-    </div>
-
-    <div>
-      <button id="submit">Save</button>
-      <button id="preview">Preview</button>
-      <button id="clear">Clear local storage</button>
-    </div>
-
-  </div>
-  <!-- Loaded last, or will not be able get the elements on page -->
-  <script src="../js/axios.min.js"></script>
-  <script src="../js/bionic-reading-api.js"></script>
-  <script src="../js/options.js"></script>
-</body>
-
+    <!-- Loaded last, or will not be able get the elements on page -->
+    <script src="../js/axios.min.js"></script>
+    <script src="../js/bionic-reading-api.js"></script>
+    <script src="../js/options.js"></script>
+  </body>
 </html>
