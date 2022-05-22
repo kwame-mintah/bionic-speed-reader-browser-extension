@@ -4,6 +4,8 @@
 let fixation;
 let saccade;
 let apiKey;
+let fontSize;
+let colour ='#07ff42'
 
 /**
  * User input options
@@ -67,21 +69,26 @@ saccadeOptions.addEventListener('click', e => {
  * of the value passed. Additionally, fill input field for,
  * RapidAPI key if it is not empty or undefined.
  */
-function displayCurrentOptions() {
-  chrome.storage.local.get(['fixation'], function (result) {
-    fixation = result.fixation;
-    changeButtonColor(fixation);
-  });
-  chrome.storage.local.get(['saccade'], function (result) {
-    saccade = result.saccade;
-    changeButtonColor(saccade);
-  });
+async function displayCurrentOptions() {
+  fixation = await readLocalStorage('fixation');
+  saccade = await readLocalStorage('saccade');
+  setBtnColourById(fixation,colour)
+  setBtnColourById(saccade,colour)
   chrome.storage.local.get(['apiKey'], function (result) {
     apiKey = result.apiKey;
     if (apiKey != '' && apiKey != undefined) {
       inputApiKey.value = apiKey;
     }
   });
+}
+
+/**
+* sets the colour of the button by the id of the button
+* @param {String} value
+* @param {String} colour
+*/
+function setBtnColourById(value,colour){
+    document.getElementById('btn'+value).style.background = colour
 }
 
 /**
@@ -121,14 +128,14 @@ function changeButtonColor(btnId) {
     document.querySelectorAll('#fixationOption button').forEach(b => {
       b.style.background = '';
     });
-    btnId.target.style.background = '#07ff42';
+    btnId.target.style.background = colour;
   }
 
   if (btnParent.id === 'saccadeOption') {
     document.querySelectorAll('#saccadeOption button').forEach(b => {
       b.style.background = '';
     });
-    btnId.target.style.background = '#07ff42';
+    btnId.target.style.background = colour;
   }
 }
 
