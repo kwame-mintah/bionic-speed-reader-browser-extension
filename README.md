@@ -1,4 +1,4 @@
-# **Bion**ic **Readi**ng **Chro**me **Extensi**on
+<h1><b>Bion</b>ic <b>Readi</b>ng <b>Chro</b>me <b>Extensi</b>on</h1>
 
 A simple chrome extension using [Bionic Reading API](https://rapidapi.com/bionic-reading-bionic-reading-default/api/bionic-reading1/), provided by [RapidAPI](https://rapidapi.com/hub).
 
