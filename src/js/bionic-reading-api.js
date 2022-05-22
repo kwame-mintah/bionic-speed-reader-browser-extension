@@ -1,3 +1,15 @@
+/**
+ * Send a post request to RapidAPI convert endpoint:
+ * https://bionic-reading1.p.rapidapi.com/convert
+ *
+ * Required parameters are content, response_type, request_type,
+ * fixation and saccade.
+ *
+ * @param {String} apiKey
+ * @param {String} content
+ * @param {String} fixation
+ * @param {String} saccade
+ */
 function requestBionic(apiKey, content, fixation, saccade) {
   const encodedParams = new URLSearchParams();
   encodedParams.append("content", content);
