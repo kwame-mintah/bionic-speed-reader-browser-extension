@@ -21,6 +21,7 @@ chrome.contextMenus.create(contextMenuConvertSelection);
 
 chrome.contextMenus.onClicked.addListener(async function (info) {
   var selectedText = info.selectionText;
+  chrome.storage.local.set({ content: selectedText });
   let tab = await chrome.tabs.create({
     url: '../src/html/response.html',
   });
