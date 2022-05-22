@@ -31,6 +31,7 @@ fixationOptions.addEventListener("click", (Event) => {
     return;
   }
   inputFixation = document.getElementById(Event.target.id).value;
+  changeButtonColor(inputFixation);
 });
 
 // Listen for events on Saccade options, if user clicks a button get the value,
@@ -42,14 +43,17 @@ saccadeOptions.addEventListener("click", (Event) => {
     return;
   }
   inputSaccade = document.getElementById(Event.target.id).value;
+  changeButtonColor(inputSaccade);
 });
 
 function displayCurrentOptions() {
   chrome.storage.local.get(["fixation"], function (result) {
     fixation = result.fixation;
+    changeButtonColor(fixation);
   });
   chrome.storage.local.get(["saccade"], function (result) {
     saccade = result.saccade;
+    changeButtonColor(saccade);
   });
   chrome.storage.local.get(["apiKey"], function (result) {
     apiKey = result.apiKey;
@@ -81,5 +85,9 @@ function clearLocalStorage(){
   chrome.storage.local.clear()
 }
 
-// Initialize the page displaying the current user options
+function changeButtonColor(btnId) {
+  document.getElementById("btn" + btnId).style.background = '#07ff42';
+}
+
+// Initialize the page displaying users options set
 displayCurrentOptions();
