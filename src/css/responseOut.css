@@ -1,0 +1,14 @@
+div{
+  color: black;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  font-size: 1.1em;
+}
+body{
+  background-color: white;
+  margin: auto;
+  width: 50%;
+  border: 0px solid black;
+  padding: 30px;
+}
