@@ -70,6 +70,6 @@ const readLocalStorage = async (key) => {
 /**
  * On page load, request for Bionic Reading of content stored.
  */
-if (document.title != 'Bionic Reading Chrome Extension'){
+if (document.title == 'Converted Bionic Text'){
   autoRequestBionic();
 }
