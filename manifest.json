@@ -7,6 +7,9 @@
     "service_worker": "./src/js/background.js"
   },
   "permissions": ["activeTab", "contextMenus", "scripting", "storage", "tabs"],
+  "action": {
+    "default_popup": "./src/html/popup.html"
+  },
   "icons": {
     "16": "./src/images/brc_logo16.png",
     "32": "./src/images/brc_logo32.png",

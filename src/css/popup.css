@@ -1,0 +1,12 @@
+div.column {
+  height: auto;
+}
+
+/* Clear floats after the columns */
+div.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  width: 200px;
+
+}
