@@ -1,9 +1,5 @@
-div.column {
-  height: auto;
-}
-
-div.row:after {
-  display: table;
-  clear: both;
-  width: 200px;
+div.row {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }

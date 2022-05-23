@@ -23,8 +23,6 @@ function setBtnColourById(value,colour){
     document.getElementById('btn'+value).style.background = colour
 }
 
-
-
 /**
  * Update the local storage values, with what the user has,
  * selected. And then get the updated values after saving.
