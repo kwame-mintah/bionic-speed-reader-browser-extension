@@ -25,6 +25,7 @@ A simple chrome extension using [Bionic Reading API](https://rapidapi.com/bionic
 4. You can change your fixation (default: 1) and saccade (default: 10).
 5. If you want to preview your changes, click 'Save' first, then 'Preview' button.
 6. Highlight text on a page and right click and select 'Bionic Reading convert text ...'
+7. Alternately, not selecting any text, right the page and select 'Bionic Reading convert page'
 
 ## FAQ
 
