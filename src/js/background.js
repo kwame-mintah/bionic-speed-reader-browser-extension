@@ -11,23 +11,40 @@ chrome.runtime.onInstalled.addListener(() => {
  * Create context menu for the extension, multiple contexts are,
  * collapsed into a single menu.
  */
-let contextMenuConvertSelection = {
+chrome.contextMenus.create({
   id: "1",
   title: "Bionic Reading convert text '%s'",
   contexts: ["selection"],
-};
+});
 
-chrome.contextMenus.create(contextMenuConvertSelection);
+chrome.contextMenus.create({
+  id: "2",
+  title: "Bionic Reading convert page",
+  contexts: ["page"],
+});
 
-chrome.contextMenus.onClicked.addListener(async function (info) {
-  var selectedText = info.selectionText;
-  chrome.storage.local.set({ content: selectedText });
-  let tab = await chrome.tabs.create({
-    url: '../src/html/response.html',
-  });
-
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    files: ['src/js/bionic-reading-api.js'],
-  });
+chrome.contextMenus.onClicked.addListener(async function (info, tab) {
+  if (info) {
+    if (info.menuItemId == "1") {
+      var selectedText = info.selectionText;
+      chrome.storage.local.set({ content: selectedText });
+      let tab = await chrome.tabs.create({
+        url: "../src/html/response.html",
+      });
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["src/js/bionic-reading-api.js"],
+      });
+    }
+    if (info.menuItemId == "2") {
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["src/js/bionic-reading-api.js"],
+      });
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["src/js/convert.js"],
+      });
+    }
+  }
 });
