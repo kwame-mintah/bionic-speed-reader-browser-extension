@@ -9,6 +9,7 @@
  * @param {String} content
  * @param {String} fixation
  * @param {String} saccade
+ * @param {Boolean} isWebpageConvert
  */
 async function requestBionic(apiKey, content, fixation, saccade, isWebpageConvert) {
   const encodedParams = new URLSearchParams();
@@ -47,12 +48,12 @@ async function requestBionic(apiKey, content, fixation, saccade, isWebpageConver
  * Get values from local storage and call `requestBionic` function,
  * need to wait for values to be returned, or else will be undefined.
  */
-async function autoRequestBionic(){
-  let apiKey = await readLocalStorage('apiKey');
-  let fixation = await readLocalStorage('fixation');
-  let saccade = await readLocalStorage('saccade');
-  let content = await readLocalStorage('content');
-  requestBionic(apiKey, content, fixation, saccade, false)
+async function autoRequestBionic() {
+  let apiKey = await readLocalStorage("apiKey");
+  let fixation = await readLocalStorage("fixation");
+  let saccade = await readLocalStorage("saccade");
+  let content = await readLocalStorage("content");
+  requestBionic(apiKey, content, fixation, saccade, false);
 }
 
 /**
@@ -76,6 +77,6 @@ const readLocalStorage = async (key) => {
 /**
  * On page load, request for Bionic Reading of content stored.
  */
-if (document.title == 'Converted Bionic Text'){
+if (document.title == "Converted Bionic Text") {
   autoRequestBionic();
 }

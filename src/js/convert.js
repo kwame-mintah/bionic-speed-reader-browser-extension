@@ -15,6 +15,6 @@ async function convertPage() {
     let text = await requestBionic(apiKey, innerText, fixation, saccade, true)
     arrayText[i].innerHTML = text;
   }
-};
+}
 
 convertPage();
