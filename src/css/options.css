@@ -1,0 +1,40 @@
+div{
+  color: black;
+  margin:auto;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+body{
+  background-color: white;
+  margin: auto;
+  width: 50%;
+  border: 0px solid black;
+  padding: 30px;
+  font-family: monospace;
+
+}
+
+p{
+  font-size: 14px;
+  margin: auto;
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+button {
+  background-color: #ffffff;
+  color: black;
+  padding: 5px 5px;
+  border-width: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+input{
+  width: 390px;
+}

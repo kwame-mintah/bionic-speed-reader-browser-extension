@@ -3,3 +3,27 @@ div.row {
   margin-right: 15px;
   margin-bottom: 15px;
 }
+button {
+  background-color: #ffffff;
+  color: black;
+  padding: 0px 8px;
+  border-width: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: -4px;
+}
+h4{
+
+}
+input{
+  margin-right: 5px;
+  width: 172px;
+}
+body{
+  font-family: monospace;
+  font: times;
+  font-weight: bold;
+  font-size: medium;
+}
