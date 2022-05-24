@@ -10,7 +10,7 @@
  * @param {String} fixation
  * @param {String} saccade
  */
-function requestBionic(apiKey, content, fixation, saccade) {
+async function requestBionic(apiKey, content, fixation, saccade, isWebpageConvert) {
   const encodedParams = new URLSearchParams();
   encodedParams.append("content", content);
   encodedParams.append("response_type", "html");
@@ -19,22 +19,28 @@ function requestBionic(apiKey, content, fixation, saccade) {
   encodedParams.append("saccade", saccade);
 
   const options = {
-    method: 'POST',
-    url: 'https://bionic-reading1.p.rapidapi.com/convert',
+    method: "POST",
     headers: {
-      'content-type': 'application/x-www-form-urlencoded',
-      'X-RapidAPI-Host': 'bionic-reading1.p.rapidapi.com',
-      'X-RapidAPI-Key': apiKey
+      "content-type": "application/x-www-form-urlencoded",
+      "X-RapidAPI-Host": "bionic-reading1.p.rapidapi.com",
+      "X-RapidAPI-Key": apiKey,
     },
-    data: encodedParams
+    body: encodedParams,
   };
 
-  axios.request(options).then(function (response) {
-    document.getElementById("bionic-response").innerHTML = response.data
-  }).catch(function (error) {
-    alert(error)
-    console.error(error);
-  });
+  if (isWebpageConvert == false) {
+    fetch("https://bionic-reading1.p.rapidapi.com/convert", options)
+      .then((response) => response.text())
+      .then((response) => {
+        document.getElementById("bionic-response").innerHTML = response;
+      })
+      .catch((err) => alert(err));
+  } else if (isWebpageConvert == true) {
+    return fetch("https://bionic-reading1.p.rapidapi.com/convert", options)
+      .then((response) => response.text())
+      .then((response) => response)
+      .catch((err) => alert(err));
+  }
 }
 
 /**
@@ -46,7 +52,7 @@ async function autoRequestBionic(){
   let fixation = await readLocalStorage('fixation');
   let saccade = await readLocalStorage('saccade');
   let content = await readLocalStorage('content');
-  requestBionic(apiKey, content, fixation, saccade)
+  requestBionic(apiKey, content, fixation, saccade, false)
 }
 
 /**
@@ -70,6 +76,6 @@ const readLocalStorage = async (key) => {
 /**
  * On page load, request for Bionic Reading of content stored.
  */
-if (document.title != 'Bionic Reading Chrome Extension'){
+if (document.title == 'Converted Bionic Text'){
   autoRequestBionic();
 }
