@@ -1,0 +1,9 @@
+[tool]
+[tool.commitizen]
+bump_message = "release $current_version → $new_version [skip-ci]"
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version = "0.0.0"
+version_files = [ "manifest.json:version" ]
+update_changelog_on_bump = true
+annotated_tag = true
