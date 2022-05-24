@@ -3,6 +3,7 @@ div.row {
   margin-right: 15px;
   margin-bottom: 15px;
 }
+
 button {
   background-color: #ffffff;
   color: black;
@@ -14,13 +15,12 @@ button {
   font-size: 16px;
   margin: -4px;
 }
-h4{
 
-}
 input{
   margin-right: 5px;
   width: 172px;
 }
+
 body{
   font-family: monospace;
   font: times;
