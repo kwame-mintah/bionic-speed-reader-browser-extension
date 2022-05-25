@@ -1,27 +1,25 @@
-div{
+div {
   color: black;
-  margin:auto;
+  margin: auto;
   width: fit-content;
   height: fit-content;
-  text-align: center;
+  text-align: left;
   font-size: 1.1em;
 }
 
-body{
+body {
   background-color: white;
   margin: auto;
-  width: 50%;
   border: 0px solid black;
   padding: 30px;
   font-family: monospace;
-
 }
 
-p{
+p {
   font-size: 14px;
   margin: auto;
   margin-top: 10px;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 button {
@@ -35,6 +33,21 @@ button {
   font-size: 20px;
 }
 
-input{
-  width: 390px;
+#apiKey {
+  width: 450px;
+  height: 30px;
+  font-family: monospace;
+}
+
+#optionButtons {
+  padding: 10px 0 0 0;
+}
+
+[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.newFeature b {
+  color: red;
 }

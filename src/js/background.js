@@ -1,10 +1,12 @@
 /**
  * Set fixation and saccade values locally in the users storage after extension,
- * has been installed.
+ * has been installed. Additionally, enable any experimental features, which may
+ * be beneficial to the user.
  */
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({ fixation: "1" });
   chrome.storage.local.set({ saccade: "10" });
+  chrome.storage.local.set({ convertWithUrl: "enable" });
 });
 
 /**
