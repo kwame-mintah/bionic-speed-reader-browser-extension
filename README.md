@@ -11,11 +11,13 @@ A simple chrome extension using [Bionic Reading API](https://rapidapi.com/bionic
 
 ## Installation Instructions
 
-1. Download this git repository master branch as a ZIP file.
-2. Unzip the file and you should have a folder named `bionic-reading-extension-master`.
-3. In Brave/Edge go to the following page (`brave://extensions/` / `edge://extensions`).
-4. On the extension page, enable developer mode.
-5. Click on "Load unpacked" locate the `bionic-reading-extensions-master` folder and open it.
+1. Navigate to the [releases page](https://github.com/kwame-mintah/bionic-reading-chrome-extension/releases) of the gitlab repository.
+2. Find the release you wish to download, or download the most recent release version.
+3. Expand the 'Assets' section and download the 'Source code (zip).
+4. Unzip the file and you should have a folder named `bionic-reading-extension-v*`.
+5. In Brave/Edge go to the following page (`brave://extensions/` / `edge://extensions`).
+6. On the extension page, enable developer mode.
+7. Click on "Load unpacked" locate the `bionic-reading-extensions-v*` folder and open it.
 
 ## Usage
 
