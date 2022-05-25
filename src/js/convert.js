@@ -5,9 +5,9 @@
  *
  */
 async function convertPage() {
-  let apiKey = await readLocalStorage("apiKey");
-  let fixation = await readLocalStorage("fixation");
-  let saccade = await readLocalStorage("saccade");
+  let apiKey = await readLocalStorage('apiKey');
+  let fixation = await readLocalStorage('fixation');
+  let saccade = await readLocalStorage('saccade');
 
   let arrayText = document.getElementsByTagName("p");
   const parser = new DOMParser();
