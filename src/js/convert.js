@@ -1,8 +1,8 @@
 /**
- * Find all elements with the p tag and for each one,
- * get the inner text for that tag, to be used as the content
- * for the post request to get the text in Bionic Reading format.
- *
+ * Make a request to convert the entire page into Bionic Reading format
+ * convert the response into a DOM tree and get all of the p tags
+ * get all of the p tags on the page originally and 
+ * replace the innerHTML with the innerHTML of the corresponding response p tag
  */
 async function convertPage() {
   let apiKey = await readLocalStorage('apiKey');
