@@ -4,5 +4,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": false
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
   }
 }
