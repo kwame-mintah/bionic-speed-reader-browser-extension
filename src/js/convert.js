@@ -19,7 +19,8 @@ async function convertPage() {
     true
   );
   console.log(response);
-  let responseText = DOMParser()
+  const parser = new DOMParser();
+  let responseText = parser
     .parseFromString(response, "text/html")
     .getElementsByTagName("p");
   console.log(responseText);
