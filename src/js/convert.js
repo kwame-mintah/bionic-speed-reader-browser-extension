@@ -9,7 +9,6 @@ async function convertPage() {
   let fixation = await readLocalStorage('fixation');
   let saccade = await readLocalStorage('saccade');
 
-  let arrayText = document.getElementsByTagName("p");
   const parser = new DOMParser();
   const response = await requestBionic(
     apiKey,
@@ -21,6 +20,8 @@ async function convertPage() {
   const responseText = parser
     .parseFromString(response, "text/html")
     .getElementsByTagName("p");
+
+  let arrayText = document.getElementsByTagName("p");
   for (let i = 0; i < arrayText.length; i++) {
     arrayText[i].innerHTML = responseText[i].innerHTML;
   }
