@@ -5,15 +5,17 @@
  *
  */
 async function convertPage() {
-  let apiKey = await readLocalStorage('apiKey');
-  let fixation = await readLocalStorage('fixation');
-  let saccade = await readLocalStorage('saccade');
+  let apiKey = await readLocalStorage("apiKey");
+  let fixation = await readLocalStorage("fixation");
+  let saccade = await readLocalStorage("saccade");
 
   let arrayText = document.getElementsByTagName("p");
+  let response = requestBionic(apiKey, document.URL, fixation, saccade, true);
+  let responseText = DOMParser()
+    .parseFromString(response, "text/html")
+    .getElementsByTagName("p");
   for (let i = 0; i < arrayText.length; i++) {
-    let innerText = arrayText[i].innerText;
-    let text = await requestBionic(apiKey, innerText, fixation, saccade, true)
-    arrayText[i].innerHTML = text;
+    arrayText[i].innerHTML = responseText[i].innerHTML;
   }
 }
 
