@@ -18,6 +18,7 @@ async function convertPage() {
     saccade,
     true
   );
+  console.log(response);
   let responseText = DOMParser()
     .parseFromString(response, "text/html")
     .getElementsByTagName("p");
