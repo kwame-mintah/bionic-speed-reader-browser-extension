@@ -14,6 +14,7 @@ async function convertPage() {
   let responseText = DOMParser()
     .parseFromString(response, "text/html")
     .getElementsByTagName("p");
+  console.log(responseText);
   for (let i = 0; i < arrayText.length; i++) {
     arrayText[i].innerHTML = responseText[i].innerHTML;
   }
