@@ -1,29 +1,53 @@
-div.row {
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 15px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f8f8ff;
+  width: 270px;
+}
+
+.row {
+  border-bottom: 1px solid #d5d5d5;
+  padding: 15px;
+}
+
+h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+input {
+  margin-top: 10px;
+  border: solid 1px #c0c0c0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: block !important;
+  width: 100%;
 }
 
 button {
-  background-color: #ffffff;
-  color: black;
-  padding: 0px 8px;
-  border-width: 1px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: -4px;
+  background-color: #e9e9e9;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #484848;
+  margin-right: 2px;
 }
 
-input{
-  margin-right: 5px;
-  width: 172px;
+#saccadeOption button {
+  padding: 6px 8px;
 }
 
-body{
-  font-family: monospace;
-  font: times;
-  font-weight: bold;
-  font-size: medium;
+.btn-save {
+  background-color: #2e85ff;
+  color: #fff;
+}
+
+.btn-select {
+  background-color: #09d500;
+  color: #fff;
 }
