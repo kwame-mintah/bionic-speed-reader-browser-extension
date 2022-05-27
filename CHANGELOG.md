@@ -1,3 +1,9 @@
+## v0.2.1 (2022-05-27)
+
+### Fix
+
+- **options**: resolve issue with preview no longer being displayed
+
 ## v0.2.0 (2022-05-27)
 
 ### Feat
