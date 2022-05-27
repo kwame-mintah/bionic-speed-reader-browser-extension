@@ -1,69 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel= "stylesheet" href="../css/options.css">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../images/brc_logo128.png" />
-    <title>Bionic Speed Reader</title>
-  </head>
 
-  <body>
-    <div id="options">
-      <div id="apiKeyOption">
-        <h2>Enter your RapidAPI Key</h2>
-        <label>
-          <input type="text" name="rapid-api" id="apiKey" />
-        </label>
-      </div>
+<head>
+  <link rel="stylesheet" href="../css/options.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../images/brc_logo128.png" />
+  <title>Bionic Speed Reader</title>
+</head>
 
-      <div id="fixationOption">
-        <h2>Fixation</h2>
-        <label>
-          <button id="btn1" value="1">1</button>
-          <button id="btn2" value="2">2</button>
-          <button id="btn3" value="3">3</button>
-          <button id="btn4" value="4">4</button>
-          <button id="btn5" value="5">5</button>
-        </label>
+<body>
+  <div id="options">
+    <div id="apiKeyOption">
+      <h2>Enter your RapidAPI Key</h2>
+      <label>
+        <input type="text" name="rapid-api" id="apiKey" />
+      </label>
+    </div>
+
+    <div id="fixationOption">
+      <h2>Fixation</h2>
+      <label>
+        <button id="btn1" value="1">1</button>
+        <button id="btn2" value="2">2</button>
+        <button id="btn3" value="3">3</button>
+        <button id="btn4" value="4">4</button>
+        <button id="btn5" value="5">5</button>
+      </label>
+      <p>
+        With the Fixation you define how much of a word is bold when it is bolded. 1 is half of the word bold and 5 is
+        least amount bold.
+      </p>
+    </div>
+
+    <div id="saccadeOption">
+      <h2>Saccade</h2>
+      <label>
+        <button id="btn10" value="10">10</button>
+        <button id="btn20" value="20">20</button>
+        <button id="btn30" value="30">30</button>
+        <button id="btn40" value="40">40</button>
+        <button id="btn50" value="50">50</button>
+      </label>
+      <p>
+        With the Saccade you define how common it is for a word to be bolded 10 is every word and 50 is least.
+      </p>
+    </div>
+
+    <div id="previewOption">
+      <h2>Preview</h2>
+      <p id="previewText">The quick brown fox jumps over the lazy dog</p>
+      <div id="bionic-response"></div>
+      <p>
+        <b>Note:</b> Save your changes before pressing the 'Preview' button.
+      </p>
+    </div>
+
+    <div id="experimentalModes">
+      <h2>Experimental Features</h2>
+      <div id="toggleWebsiteConvert">
+        <p class="newFeature"><b>**New**</b> Convert webpage using page url <b>**New**</b></p>
         <p>
-          With the Fixation you define how much of a word is bold when it is bolded. 1 is half of the word bold and 5 is least amount bold
+          <u>Recommended:</u> Enabling this option will use the current webpage url, as the content to be used for
+          requesting
+          text in Bionic Reading format. Please note, converting a webpage may take longer than usual to convert and
+          webpages may not keep their original formatting.
         </p>
-      </div>
-
-      <div id="saccadeOption">
-        <h2>Saccade</h2>
-        <label>
-          <button id="btn10" value="10">10</button>
-          <button id="btn20" value="20">20</button>
-          <button id="btn30" value="30">30</button>
-          <button id="btn40" value="40">40</button>
-          <button id="btn50" value="50">50</button>
-        </label>
         <p>
-          With the Saccade you define how common it is for a word to be bolded 10 is every word and 50 is least.
+          Disabling this feature, may result in reaching your daily API limit quicker, as multiple API calls will be
+          made to convert a webpage.
+          <label>Enable</label>
+          <input id="enableFeature1E" type="checkbox" value="enable" />
+          <label>Disable</label>
+          <input id="enableFeature1D" type="checkbox" value="disable" />
         </p>
-      </div>
-
-      <div id="previewOption">
-        <h2>Preview</h2>
-        <p id="previewText">The quick brown fox jumps over the lazy dog</p>
-        <div id="bionic-response"></div>
-        <p>
-          <b>Note:</b> Save your changes before pressing the 'Preview' button.
-        </p>
-      </div>
-
-      <div>
-        <button id="submit">Save</button>
-        <button id="preview">Preview</button>
-        <button id="clear">Clear local storage</button>
       </div>
     </div>
-    <!-- Loaded last, or will not be able get the elements on page -->
-    <script src="../js/bionic-reading-api.js"></script>
-    <script src="../js/utility.js"></script>
-    <script src="../js/options.js"></script>
-  </body>
+
+    <div id="optionButtons">
+      <button id="submit">Save</button>
+      <button id="preview">Preview</button>
+      <button id="clear">Clear local storage</button>
+    </div>
+  </div>
+  <!-- Loaded last, or will not be able get the elements on page -->
+  <script src="../js/bionic-reading-api.js"></script>
+  <script src="../js/utility.js"></script>
+  <script src="../js/options.js"></script>
+</body>
+
 </html>
