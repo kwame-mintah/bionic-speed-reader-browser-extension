@@ -6,12 +6,12 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f8f8ff;
+  background-color: #fff;
   width: 270px;
 }
 
 .row {
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 1px solid #eee;
   padding: 15px;
 }
 
@@ -30,12 +30,13 @@ input {
 }
 
 button {
-  background-color: #e9e9e9;
-  border: none;
+  background-color: #fff;
+  border: solid 1px #c0c0c0;
   border-radius: 6px;
-  padding: 6px 10px;
+  padding: 7px 11px;
   color: #484848;
   margin-right: 2px;
+  font-size: 15px;
 }
 
 #saccadeOption button {
@@ -48,6 +49,7 @@ button {
 }
 
 .btn-select {
-  background-color: #09d500;
+  background-color: #08c500;
   color: #fff;
+  border: 1px solid #08c500;
 }
