@@ -4,14 +4,14 @@
 let fixation;
 let saccade;
 let apiKey;
-const highClassName = 'btn-select';
+const highClassName = "btn-select";
 
 /**
  * User input options
  */
 let inputFixation;
 let inputSaccade;
-const inputApiKey = document.getElementById('apiKey');
+const inputApiKey = document.getElementById("apiKey");
 
 /**
  * sets the colour of the button by the id of the button
@@ -19,7 +19,7 @@ const inputApiKey = document.getElementById('apiKey');
  * @param {String} colour
  */
 function setBtnColourById(value, colour) {
-  document.getElementById('btn' + value).style.background = colour;
+  document.getElementById("btn" + value).style.background = colour;
 }
 
 /**
@@ -28,8 +28,8 @@ function setBtnColourById(value, colour) {
  */
 /* eslint-disable */
 function saveDataOptions(e) {
-  e.target.innerText = 'Saved';
-  e.target.className = 'btn-saved';
+  e.target.innerText = "Saved";
+  e.target.className = "btn-saved";
   e.target.disabled = true;
 
   if (inputFixation != undefined) {
@@ -38,14 +38,14 @@ function saveDataOptions(e) {
   if (inputSaccade != undefined) {
     chrome.storage.local.set({ saccade: inputSaccade });
   }
-  if (inputApiKey != undefined && inputApiKey.value !== 'undefined') {
+  if (inputApiKey != undefined && inputApiKey.value !== "undefined") {
     chrome.storage.local.set({ apiKey: inputApiKey.value });
   }
 }
 
 const resetSave = () => {
-  btnSubmit.className = 'btn-save';
-  btnSubmit.innerText = 'Save';
+  btnSubmit.className = "btn-save";
+  btnSubmit.innerText = "Save";
   btnSubmit.disabled = false;
 };
 
@@ -59,13 +59,13 @@ const resetSave = () => {
  */
 /* eslint-disable */
 async function displayCurrentOptions() {
-  fixation = await readLocalStorage('fixation');
-  saccade = await readLocalStorage('saccade');
+  fixation = await readLocalStorage("fixation");
+  saccade = await readLocalStorage("saccade");
   setBtnColourById(fixation, colour);
   setBtnColourById(saccade, colour);
-  chrome.storage.local.get(['apiKey'], function (result) {
+  chrome.storage.local.get(["apiKey"], function (result) {
     apiKey = result.apiKey;
-    if (apiKey != '' && apiKey != undefined) {
+    if (apiKey != "" && apiKey != undefined) {
       inputApiKey.value = apiKey;
     }
   });
@@ -75,9 +75,9 @@ async function displayCurrentOptions() {
  * Listen for events on Fixation options, if user clicks a button get the value,
  * of the button clicked.
  */
-const fixationOptions = document.getElementById('fixationOption');
-fixationOptions.addEventListener('click', e => {
-  const btnClicked = e.target.nodeName === 'BUTTON';
+const fixationOptions = document.getElementById("fixationOption");
+fixationOptions.addEventListener("click", e => {
+  const btnClicked = e.target.nodeName === "BUTTON";
   if (!btnClicked) {
     return;
   }
@@ -90,9 +90,9 @@ fixationOptions.addEventListener('click', e => {
  * Listen for events on Saccade options, if user clicks a button get the value,
  * of the button clicked.
  */
-const saccadeOptions = document.getElementById('saccadeOption');
-saccadeOptions.addEventListener('click', e => {
-  const btnClicked = e.target.nodeName === 'BUTTON';
+const saccadeOptions = document.getElementById("saccadeOption");
+saccadeOptions.addEventListener("click", e => {
+  const btnClicked = e.target.nodeName === "BUTTON";
   if (!btnClicked) {
     return;
   }
@@ -108,16 +108,16 @@ saccadeOptions.addEventListener('click', e => {
 function changeButtonColor(btnId) {
   const btnParent = btnId.target.parentElement.parentElement;
 
-  if (btnParent.id === 'fixationOption') {
-    document.querySelectorAll('#fixationOption button').forEach(b => {
-      b.className = '';
+  if (btnParent.id === "fixationOption") {
+    document.querySelectorAll("#fixationOption button").forEach(b => {
+      b.className = "";
     });
     btnId.target.className = highClassName;
   }
 
-  if (btnParent.id === 'saccadeOption') {
-    document.querySelectorAll('#saccadeOption button').forEach(b => {
-      b.className = '';
+  if (btnParent.id === "saccadeOption") {
+    document.querySelectorAll("#saccadeOption button").forEach(b => {
+      b.className = "";
     });
     btnId.target.className = highClassName;
   }
