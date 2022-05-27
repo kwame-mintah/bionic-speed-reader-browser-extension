@@ -38,7 +38,7 @@ btnClear.addEventListener("click", () => chrome.storage.local.clear());
  */
 function previewChanges() {
   const content = document.getElementById("previewText").innerHTML;
-  requestBionic(apiKey, content, fixation, saccade);
+  requestBionic(apiKey, content, fixation, saccade, false);
 }
 
 /**
