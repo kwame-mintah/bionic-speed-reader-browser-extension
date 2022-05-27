@@ -1,3 +1,13 @@
+## v0.2.0 (2022-05-27)
+
+### Feat
+
+- **convert**: allow the user to toggle between using page url or paragraphs for pages
+
+### Refactor
+
+- **permissions**: remove `tabs` from list of extension permissions
+
 ## v0.1.0 (2022-05-24)
 
 ### Feat
