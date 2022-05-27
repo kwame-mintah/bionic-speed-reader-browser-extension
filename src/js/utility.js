@@ -27,7 +27,11 @@ function setBtnColourById(value, colour) {
  * selected. And then get the updated values after saving.
  */
 /* eslint-disable */
-function saveDataOptions() {
+function saveDataOptions(e) {
+  e.target.innerText = 'Saved';
+  e.target.className = 'btn-saved';
+  e.target.disabled = true;
+
   if (inputFixation != undefined) {
     chrome.storage.local.set({ fixation: inputFixation });
   }
@@ -38,6 +42,13 @@ function saveDataOptions() {
     chrome.storage.local.set({ apiKey: inputApiKey.value });
   }
 }
+
+const resetSave = () => {
+  btnSubmit.className = 'btn-save';
+  btnSubmit.innerText = 'Save';
+  btnSubmit.disabled = false;
+};
+
 /* eslint-disable */
 
 /**
@@ -72,6 +83,7 @@ fixationOptions.addEventListener('click', e => {
   }
   inputFixation = document.getElementById(e.target.id).value;
   changeButtonColor(e);
+  resetSave();
 });
 
 /**
@@ -86,6 +98,7 @@ saccadeOptions.addEventListener('click', e => {
   }
   inputSaccade = document.getElementById(e.target.id).value;
   changeButtonColor(e);
+  resetSave();
 });
 
 /**
