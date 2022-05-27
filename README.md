@@ -54,7 +54,7 @@ Documentation of using RapidAPI can be found [here](https://docs.rapidapi.com/do
 
 ## Disclaimer
 
-This project is not afflicted with Bionic Reading (BR®). All trademarks are the property of their respective owners.
+This project is not affiliated with Bionic Reading (BR®). All trademarks are the property of their respective owners.
 
 For more information on Bionic Reading and how it works, please see: https://bionic-reading.com/about/. Additionally, you can
 find the official Chrome extension [here](https://chrome.google.com/webstore/detail/bionic-reading/kdfkejelgkdjgfoolngegkhkiecmlflj).
