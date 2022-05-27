@@ -1,6 +1,6 @@
-<h1><b>Bion</b>ic <b>Readi</b>ng <b>Chro</b>me <b>Extensi</b>on</h1>
+# Bionic Speed Reader Browser Extension
 
-A simple chrome extension using [Bionic Reading API](https://rapidapi.com/bionic-reading-bionic-reading-default/api/bionic-reading1/), provided by [RapidAPI](https://rapidapi.com/hub).
+A simple browser extension using [Bionic Reading API](https://rapidapi.com/bionic-reading-bionic-reading-default/api/bionic-reading1/), provided by [RapidAPI](https://rapidapi.com/hub).
 
 <p style="text-align:center"> 🚧  👷 Currently in the early stages of development 👷 🚧 </p>
 
@@ -21,13 +21,13 @@ A simple chrome extension using [Bionic Reading API](https://rapidapi.com/bionic
 
 ## Usage
 
-1. On your browsers extension page, click 'Details' on Bionic Reading Chrome Extension.
+1. On your browsers extension page, click 'Details' on Bionic Speed Reader Browser Extension.
 2. Next click 'Extension options'.
 3. Enter your RapidAPI Key that is subscribed to the Bionic Reading API.
 4. You can change your fixation (default: 1) and saccade (default: 10).
 5. If you want to preview your changes, click 'Save' first, then 'Preview' button.
-6. Highlight text on a page and right click and select 'Bionic Reading convert text ...'
-7. Alternately, not selecting any text, right click the page and select 'Bionic Reading convert page'
+6. Highlight text on a page and right click and select 'Bionic Speed Reading convert text ...'
+7. Alternately, not selecting any text, right click the page and select 'Bionic Speed Reading convert page'
 
 ## FAQ
 
@@ -54,6 +54,7 @@ Documentation of using RapidAPI can be found [here](https://docs.rapidapi.com/do
 
 ## Disclaimer
 
-Un-official chrome extension for Bionic Reading (BR®). All trademarks are the property of their respective owners.
+This project is not affiliated with Bionic Reading (BR®). All trademarks are the property of their respective owners.
 
-For more information on Bionic Reading and how it works, please see: https://bionic-reading.com/about/
+For more information on Bionic Reading and how it works, please see: https://bionic-reading.com/about/. Additionally, you can
+find the official Chrome extension [here](https://chrome.google.com/webstore/detail/bionic-reading/kdfkejelgkdjgfoolngegkhkiecmlflj).

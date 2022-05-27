@@ -13,13 +13,13 @@ chrome.runtime.onInstalled.addListener(() => {
  */
 chrome.contextMenus.create({
   id: "1",
-  title: "Bionic Reading convert text '%s'",
+  title: "Bionic Speed Reader convert text '%s'",
   contexts: ["selection"],
 });
 
 chrome.contextMenus.create({
   id: "2",
-  title: "Bionic Reading convert page",
+  title: "Bionic Speed Reader convert page",
   contexts: ["page"],
 });
 
