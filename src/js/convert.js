@@ -49,11 +49,9 @@ async function convertPageWithParagraphs() {
 
 async function checkFeaturesEnabled() {
   let convertWithUrl = await readLocalStorage("convertWithUrl");
-  if (convertWithUrl == "enable") {
-    convertPageWithWebpageUrl();
-  } else if (convertWithUrl == "disable") {
-    convertPageWithParagraphs();
-  }
+  convertWithUrl == "enable"
+    ? convertPageWithWebpageUrl()
+    : convertPageWithParagraphs();
 }
 
 checkFeaturesEnabled();
