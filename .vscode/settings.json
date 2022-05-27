@@ -5,6 +5,7 @@
     "source.fixAll": true,
     "source.organizeImports": false
   },
+  "prettier.singleQuote": false,
   "[markdown]": {
     "editor.formatOnSave": false
   }
