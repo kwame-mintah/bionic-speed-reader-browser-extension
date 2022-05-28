@@ -4,7 +4,7 @@
 let fixation;
 let saccade;
 let apiKey;
-let colour = "#07ff42";
+const highClassName = "btn-select";
 
 /**
  * User input options
@@ -27,7 +27,11 @@ function setBtnColourById(value, colour) {
  * selected. And then get the updated values after saving.
  */
 /* eslint-disable */
-function saveDataOptions() {
+function saveDataOptions(e) {
+  e.target.innerText = "Saved";
+  e.target.className = "btn-saved";
+  e.target.disabled = true;
+
   if (inputFixation != undefined) {
     chrome.storage.local.set({ fixation: inputFixation });
   }
@@ -38,6 +42,13 @@ function saveDataOptions() {
     chrome.storage.local.set({ apiKey: inputApiKey.value });
   }
 }
+
+const resetSave = () => {
+  btnSubmit.className = "btn-save";
+  btnSubmit.innerText = "Save";
+  btnSubmit.disabled = false;
+};
+
 /* eslint-disable */
 
 /**
@@ -65,13 +76,14 @@ async function displayCurrentOptions() {
  * of the button clicked.
  */
 const fixationOptions = document.getElementById("fixationOption");
-fixationOptions.addEventListener("click", (e) => {
+fixationOptions.addEventListener("click", e => {
   const btnClicked = e.target.nodeName === "BUTTON";
   if (!btnClicked) {
     return;
   }
   inputFixation = document.getElementById(e.target.id).value;
   changeButtonColor(e);
+  resetSave();
 });
 
 /**
@@ -79,13 +91,14 @@ fixationOptions.addEventListener("click", (e) => {
  * of the button clicked.
  */
 const saccadeOptions = document.getElementById("saccadeOption");
-saccadeOptions.addEventListener("click", (e) => {
+saccadeOptions.addEventListener("click", e => {
   const btnClicked = e.target.nodeName === "BUTTON";
   if (!btnClicked) {
     return;
   }
   inputSaccade = document.getElementById(e.target.id).value;
   changeButtonColor(e);
+  resetSave();
 });
 
 /**
@@ -96,16 +109,16 @@ function changeButtonColor(btnId) {
   const btnParent = btnId.target.parentElement.parentElement;
 
   if (btnParent.id === "fixationOption") {
-    document.querySelectorAll("#fixationOption button").forEach((b) => {
-      b.style.background = "";
+    document.querySelectorAll("#fixationOption button").forEach(b => {
+      b.className = "";
     });
-    btnId.target.style.background = colour;
+    btnId.target.className = highClassName;
   }
 
   if (btnParent.id === "saccadeOption") {
-    document.querySelectorAll("#saccadeOption button").forEach((b) => {
-      b.style.background = "";
+    document.querySelectorAll("#saccadeOption button").forEach(b => {
+      b.className = "";
     });
-    btnId.target.style.background = colour;
+    btnId.target.className = highClassName;
   }
 }
