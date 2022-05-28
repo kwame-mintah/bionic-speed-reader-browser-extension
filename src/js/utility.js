@@ -18,8 +18,8 @@ const inputApiKey = document.getElementById("apiKey");
  * @param {String} value
  * @param {String} colour
  */
-function setBtnColourById(value, colour) {
-  document.getElementById("btn" + value).style.background = colour;
+function setBtnColourById(value) {
+  document.getElementById("btn" + value).className = highClassName;
 }
 
 /**
@@ -61,8 +61,8 @@ const resetSave = () => {
 async function displayCurrentOptions() {
   fixation = await readLocalStorage("fixation");
   saccade = await readLocalStorage("saccade");
-  setBtnColourById(fixation, colour);
-  setBtnColourById(saccade, colour);
+  setBtnColourById(fixation);
+  setBtnColourById(saccade);
   chrome.storage.local.get(["apiKey"], function (result) {
     apiKey = result.apiKey;
     if (apiKey != "" && apiKey != undefined) {
