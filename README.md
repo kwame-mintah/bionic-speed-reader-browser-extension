@@ -14,10 +14,10 @@ A simple browser extension using [Bionic Reading API](https://rapidapi.com/bioni
 1. Navigate to the [releases page](https://github.com/kwame-mintah/bionic-reading-chrome-extension/releases) of the github repository.
 2. Find the release you wish to download, or download the most recent release version.
 3. Expand the 'Assets' section and download the 'Source code (zip)'.
-4. Unzip the file and you should have a folder named `bionic-reading-extension-*`.
-5. In Brave/Edge go to the following page (`brave://extensions/` / `edge://extensions`).
+4. Unzip the file and you should have a folder named `bionic-speed-reader-browser-extension-*.*.*`.
+5. In Chrome / Brave / Edge go to the following page (`brave://extensions` / `chrome://extensions` / `edge://extensions`).
 6. On the extension page, enable developer mode.
-7. Click on "Load unpacked" locate the `bionic-reading-extensions-*` folder and open it.
+7. Click on "Load unpacked" locate the `bionic-speed-reader-browser-extension-*.*.*` folder and open it.
 
 ## Usage
 

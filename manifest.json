@@ -1,6 +1,6 @@
 {
   "name": "Bionic Speed Reader",
-  "description": "An extension using the Bionic Reading API, to convert text to Bionic Reading®",
+  "description": "An extension using the Bionic Reading API, to convert text to Bionic Reading ®",
   "version": "0.2.1",
   "manifest_version": 3,
   "background": {
