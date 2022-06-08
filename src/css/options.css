@@ -1,18 +1,17 @@
 div {
   color: black;
   margin: auto;
-  width: fit-content;
+  max-width: 458px;
   height: fit-content;
   text-align: left;
-  font-size: 1.1em;
 }
 
 body {
-  background-color: white;
+  background-color: #fff;
   margin: auto;
   border: 0px solid black;
   padding: 30px;
-  font-family: monospace;
+  font-family: sans-serif;
 }
 
 p {
@@ -23,20 +22,18 @@ p {
 }
 
 button {
-  background-color: #ffffff;
-  color: black;
-  padding: 5px 5px;
-  border-width: 1px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
+  background-color: #fff;
+  border: solid 1px #c0c0c0;
+  border-radius: 6px;
+  padding: 7px 11px;
+  color: #484848;
+  margin-right: 2px;
+  font-size: 15px;
 }
 
 #apiKey {
   width: 450px;
   height: 30px;
-  font-family: monospace;
 }
 
 #optionButtons {
@@ -50,4 +47,36 @@ button {
 
 .newFeature b {
   color: red;
+}
+
+.btn-saccade-container {
+  margin-left: 2px;
+}
+
+.btn-fix-container {
+  margin-left: 2px;
+}
+
+.btn-save,
+.btn-preview,
+.btn-clear-storage {
+  background-color: #2e85ff;
+  color: #fff;
+}
+
+.btn-select {
+  background-color: #08c500;
+  color: #fff;
+  border: 1px solid #08c500;
+}
+
+.btn-saved {
+  background-color: #8fbeff;
+  color: #eee;
+}
+
+button.btn-preview:active,
+button.btn-clear-storage:active {
+  background-color: #8fbeff;
+  color: #eee;
 }
