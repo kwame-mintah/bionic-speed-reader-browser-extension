@@ -21,13 +21,13 @@
 
     <div id="fixationOption">
       <h2>Fixation</h2>
-      <label>
+      <div class="btn-fix-container">
         <button id="btn1" value="1">1</button>
         <button id="btn2" value="2">2</button>
         <button id="btn3" value="3">3</button>
         <button id="btn4" value="4">4</button>
         <button id="btn5" value="5">5</button>
-      </label>
+      </div>
       <p>
         With the Fixation you define how much of a word is bold when it is bolded. 1 is half of the word bold and 5 is
         least amount bold.
@@ -36,13 +36,13 @@
 
     <div id="saccadeOption">
       <h2>Saccade</h2>
-      <label>
+      <div class="btn-saccade-container">
         <button id="btn10" value="10">10</button>
         <button id="btn20" value="20">20</button>
         <button id="btn30" value="30">30</button>
         <button id="btn40" value="40">40</button>
         <button id="btn50" value="50">50</button>
-      </label>
+      </div>
       <p>
         With the Saccade you define how common it is for a word to be bolded 10 is every word and 50 is least.
       </p>
@@ -60,7 +60,7 @@
     <div id="experimentalModes">
       <h2>Experimental Features</h2>
       <div id="toggleWebsiteConvert">
-        <p class="newFeature"><b>**New**</b> Convert webpage using page url <b>**New**</b></p>
+        <h3 class="newFeature"><b>**New**</b> Convert webpage using page URL <b>**New**</b></h3>
         <p>
           <u>Recommended:</u> Enabling this option will use the current webpage url, as the content to be used for
           requesting
@@ -80,9 +80,9 @@
     </div>
 
     <div id="optionButtons">
-      <button id="submit">Save</button>
-      <button id="preview">Preview</button>
-      <button id="clear">Clear local storage</button>
+      <button id="submit" class="btn-save">Save</button>
+      <button id="preview" class="btn-preview">Preview</button>
+      <button id="clear" class="btn-clear-storage">Clear local storage</button>
     </div>
   </div>
   <!-- Loaded last, or will not be able get the elements on page -->

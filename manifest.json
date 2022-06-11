@@ -3,6 +3,7 @@
   "description": "An extension using the Bionic Reading API, to convert text to Bionic Reading ®",
   "version": "0.2.1",
   "manifest_version": 3,
+  "homepage_url": "https://github.com/kwame-mintah/bionic-speed-reader-browser-extension/blob/master/README.md",
   "background": {
     "service_worker": "./src/js/background.js"
   },
