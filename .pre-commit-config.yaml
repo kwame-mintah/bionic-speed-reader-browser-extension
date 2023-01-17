@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v4.4.0
     hooks:
       - id: check-added-large-files
       - id: check-merge-conflict
@@ -12,6 +12,6 @@ repos:
       - id: no-commit-to-branch
         args: ['--branch', 'master']
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.26.0
+    rev: v8.32.0
     hooks:
       - id: eslint
