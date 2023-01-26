@@ -1,3 +1,10 @@
+## v0.3.0 (2023-01-26)
+
+### Feat
+
+- **manifest**: add homepage url to project readme documentation
+- **options**: apply same styling used on popup to options page
+
 ## v0.2.1 (2022-05-27)
 
 ### Fix
