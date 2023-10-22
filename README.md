@@ -4,6 +4,18 @@ A simple browser extension using [Bionic Reading API](https://rapidapi.com/bioni
 
 <p style="text-align:center"> 🚧  👷 Currently in the early stages of development 👷 🚧 </p>
 
+![](docs/convert_page_with_url_demo.gif)
+
+> [!NOTE]
+>
+> Extension performance is dependent on the Bionic Reading API.
+
+## Features
+
+- Convert entire webpage use the URL (_webpages may not keep their original formatting_)
+- Convert each paragraph on the page to Bionic format
+- Convert selected text only to Bionic format
+
 ## Prerequisites
 
 1. Have a RapidAPI account,
