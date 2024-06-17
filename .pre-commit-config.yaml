@@ -15,3 +15,5 @@ repos:
     rev: v9.5.0 # Get the latest from: https://github.com/pre-commit/mirrors-eslint/tags
     hooks:
       - id: eslint
+        args:
+          - "--fix"

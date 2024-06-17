@@ -30,7 +30,7 @@ chrome.contextMenus.onClicked.addListener(async function (info, tab) {
     if (info.menuItemId == "1") {
       var selectedText = info.selectionText;
       chrome.storage.local.set({ content: selectedText });
-      let tab = await chrome.tabs.create({
+      const tab = await chrome.tabs.create({
         url: "../src/html/response.html",
       });
       chrome.scripting.executeScript({
