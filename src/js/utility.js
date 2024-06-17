@@ -26,7 +26,7 @@ function setBtnColourById(value) {
  * Update the local storage values, with what the user has,
  * selected. And then get the updated values after saving.
  */
-/* eslint-disable */
+
 function saveDataOptions(e) {
   e.target.innerText = "Saved";
   e.target.className = "btn-saved";
@@ -49,7 +49,7 @@ const resetSave = () => {
   btnSubmit.disabled = false;
 };
 
-/* eslint-disable */
+
 
 /**
  * Get the value of each the local storage, e.g. KEY=VALUE.
@@ -57,7 +57,7 @@ const resetSave = () => {
  * of the value passed. Additionally, fill input field for,
  * RapidAPI key if it is not empty or undefined.
  */
-/* eslint-disable */
+
 async function displayCurrentOptions() {
   fixation = await readLocalStorage("fixation");
   saccade = await readLocalStorage("saccade");

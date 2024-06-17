@@ -1,8 +1,8 @@
 /**
  * Experimental Feature check boxes
  */
-let disabledF1Check = document.getElementById("enableFeature1D");
-let enableF1Check = document.getElementById("enableFeature1E");
+const disabledF1Check = document.getElementById("enableFeature1D");
+const enableF1Check = document.getElementById("enableFeature1E");
 
 /**
  * Listen for click event, to initiate saving of the users options.
@@ -60,7 +60,7 @@ function toggleFeature1(value) {
  * and check the corresponding checkbox.
  */
 async function displayExperimentalFeaturesEnabled() {
-  let convertWithUrl = await readLocalStorage("convertWithUrl");
+  const convertWithUrl = await readLocalStorage("convertWithUrl");
   if (convertWithUrl == "enable") {
     enableF1Check.checked = true;
   } else {

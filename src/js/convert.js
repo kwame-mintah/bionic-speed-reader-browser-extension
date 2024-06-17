@@ -5,9 +5,9 @@
  * replace the innerHTML with the innerHTML of the corresponding response p tag
  */
 async function convertPageWithWebpageUrl() {
-  let apiKey = await readLocalStorage("apiKey");
-  let fixation = await readLocalStorage("fixation");
-  let saccade = await readLocalStorage("saccade");
+  const apiKey = await readLocalStorage("apiKey");
+  const fixation = await readLocalStorage("fixation");
+  const saccade = await readLocalStorage("saccade");
   const parser = new DOMParser();
   const response = await requestBionic(
     apiKey,
@@ -20,7 +20,7 @@ async function convertPageWithWebpageUrl() {
     .parseFromString(response, "text/html")
     .getElementsByTagName("p");
 
-  let arrayText = document.getElementsByTagName("p");
+  const arrayText = document.getElementsByTagName("p");
   for (let i = 0; i < arrayText.length; i++) {
     arrayText[i].innerHTML = responseText[i].innerHTML;
   }
@@ -36,19 +36,19 @@ async function convertPageWithWebpageUrl() {
  * their daily API limit quicker.
  */
 async function convertPageWithParagraphs() {
-  let arrayText = document.getElementsByTagName("p");
-  let apiKey = await readLocalStorage("apiKey");
-  let fixation = await readLocalStorage("fixation");
-  let saccade = await readLocalStorage("saccade");
+  const arrayText = document.getElementsByTagName("p");
+  const apiKey = await readLocalStorage("apiKey");
+  const fixation = await readLocalStorage("fixation");
+  const saccade = await readLocalStorage("saccade");
   for (let i = 0; i < arrayText.length; i++) {
-    let innerText = arrayText[i].innerText;
-    let text = await requestBionic(apiKey, innerText, fixation, saccade, true);
+    const innerText = arrayText[i].innerText;
+    const text = await requestBionic(apiKey, innerText, fixation, saccade, true);
     arrayText[i].innerHTML = text;
   }
 }
 
 async function checkFeaturesEnabled() {
-  let convertWithUrl = await readLocalStorage("convertWithUrl");
+  const convertWithUrl = await readLocalStorage("convertWithUrl");
   convertWithUrl == "enable"
     ? convertPageWithWebpageUrl()
     : convertPageWithParagraphs();

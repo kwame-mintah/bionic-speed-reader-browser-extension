@@ -49,10 +49,10 @@ async function requestBionic(apiKey, content, fixation, saccade, isWebpageConver
  * need to wait for values to be returned, or else will be undefined.
  */
 async function autoRequestBionic() {
-  let apiKey = await readLocalStorage("apiKey");
-  let fixation = await readLocalStorage("fixation");
-  let saccade = await readLocalStorage("saccade");
-  let content = await readLocalStorage("content");
+  const apiKey = await readLocalStorage("apiKey");
+  const fixation = await readLocalStorage("fixation");
+  const saccade = await readLocalStorage("saccade");
+  const content = await readLocalStorage("content");
   requestBionic(apiKey, content, fixation, saccade, false);
 }
 
