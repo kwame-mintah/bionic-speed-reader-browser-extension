@@ -12,7 +12,7 @@ repos:
       - id: no-commit-to-branch
         args: ["--branch", "master"]
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.22.0 # Get the latest from: https://github.com/pre-commit/mirrors-eslint/tags
+    rev: v9.30.0 # Get the latest from: https://github.com/pre-commit/mirrors-eslint/tags
     hooks:
       - id: eslint
         args:
